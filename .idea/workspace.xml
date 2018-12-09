@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3588af5e-21bd-4c93-8e09-b4563037c6dc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/cool-background (1).png" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="3588af5e-21bd-4c93-8e09-b4563037c6dc" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -4327,6 +4324,11 @@
             <path>
               <item name="CVMaker" type="b2602c69:ProjectViewProjectNode" />
               <item name="CVMaker" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CVMaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CVMaker" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -4347,6 +4349,8 @@
       <recent name="D:\Fontys\HBO-ICT\Semester 3\Vrij project\CVMaker\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Fontys\HBO-ICT\Semester 3\Vrij project\CVMaker\img" />
+      <recent name="D:\Fontys\HBO-ICT\Semester 3\Vrij project\CVMaker" />
       <recent name="D:\Fontys\HBO-ICT\Semester 3\Vrij project\CVMaker\js" />
     </key>
   </component>
@@ -4393,18 +4397,17 @@
       <workItem from="1543824352001" duration="13648000" />
       <workItem from="1543906645352" duration="3270000" />
       <workItem from="1543997232030" duration="1925000" />
-      <workItem from="1544345211300" duration="1367000" />
+      <workItem from="1544345211300" duration="1416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40287000" />
+    <option name="totallyTimeSpent" value="40336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
