@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3588af5e-21bd-4c93-8e09-b4563037c6dc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Proces/Afbeeldingen/cvmaker_proces_Begin1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backupimg.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/cool-background (1).png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jquery-3.3.1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/template1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jspdf.debug.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/jspdf.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/cv_1_TEMPLATE_V1.psd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv1.indd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv1.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv2.indd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv2.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv3-1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/template1_tussentijdsv3.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/variables.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +18,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="33" column="790" lean-forward="false" selection-start-line="33" selection-start-column="790" selection-end-line="33" selection-end-column="790" />
+            <state relative-caret-position="864">
+              <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -46,8 +28,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="417">
+              <caret line="133" column="16" lean-forward="false" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -56,8 +38,8 @@
       <file leaf-file-name="backup.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/backup.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4806">
-              <caret line="178" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+            <state relative-caret-position="64">
+              <caret line="151" column="19" lean-forward="false" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -66,8 +48,8 @@
       <file leaf-file-name="backupindex.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/backupindex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="26" column="19" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="38" selection-end-column="39" />
+            <state relative-caret-position="297">
+              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="39" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -149,18 +131,19 @@
       <find>font-family</find>
       <find>API.addfont</find>
       <find>.icon</find>
-      <find>fixed-text</find>
       <find>cONTAINer</find>
       <find>vw</find>
       <find>margin-right</find>
       <find>container</find>
       <find>main</find>
       <find>contaien</find>
-      <find>container-cards</find>
       <find>wrapper</find>
       <find>position: absolute</find>
-      <find>card</find>
       <find>height</find>
+      <find>container-cards</find>
+      <find>fixed-text</find>
+      <find>column</find>
+      <find>card</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -330,12 +313,12 @@
       <workItem from="1544426401609" duration="14741000" />
       <workItem from="1544458117590" duration="3386000" />
       <workItem from="1544516638256" duration="2807000" />
-      <workItem from="1544602452861" duration="1111000" />
+      <workItem from="1544602452861" duration="4110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79336000" />
+    <option name="totallyTimeSpent" value="82335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -731,34 +714,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/backupindex.html">
+    <entry file="file://$PROJECT_DIR$/css/backup.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="19" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="38" selection-end-column="39" />
+        <state relative-caret-position="64">
+          <caret line="151" column="19" lean-forward="false" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/backup.css">
+    <entry file="file://$PROJECT_DIR$/css/backupindex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4806">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+        <state relative-caret-position="297">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="39" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="790" lean-forward="false" selection-start-line="33" selection-start-column="790" selection-end-line="33" selection-end-column="790" />
+        <state relative-caret-position="864">
+          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="417">
+          <caret line="133" column="16" lean-forward="false" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
           <folding />
         </state>
       </provider>
