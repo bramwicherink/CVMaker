@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jspdf.min.js"></script>
+    <script src="jspdf.debug.js"></script>
+    <script src="js/templates_base64/template1.js"></script>
+    <script src="js/formToPDF/formToPDF.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+</head>
+<body>
+<div class="container">
+<div class="navbar">
+    <li><a href="index.html" class="home">HOME</a></li>
+    <li><a href="maak.html" class="maak active-maak">MAAK</a></li>
+    <li><a href="contact.html" class="contact">CONTACT</a></li>
+</div>
+<div id="wrapper">
+
+
+
+    <input type="text" id="voornaam" value="" placeholder="Voornaam"><br>
+    <input type="text" id="achternaam" value="" placeholder="Achternaam" /><br>
+    <input type="text" id="adresgegevens" value="" placeholder="Adres" /><br>
+    <input type="text" id="telefoon" value="" placeholder="Telefoonnummer"/><br>
+    <input type="text" id="email"  value="" placeholder="E-mailadres"/><br>
+    <input type="date" id="geboortedatum" value="" placeholder="Geboortedatum"/><br>
+    <input type="text" id="geboorteplaats" value="" placeholder="Geboorteplaats"/><br>
+    <select name="geslacht">
+        <option value="man">Man</option>
+        <option value="vrouw">Vrouw</option>
+        <option value="nietbepaald">Niet-bepaald</option>
+    </select>
+    <input type="text" id="nationaliteit"  value="" placeholder="Nationaliteit"/>
+    <input type="button" id="button" value="Maak mijn CV!"/>
+
+
+</div>
+    <script>
+    $('#button').click(function() {
+
+    let doc = new jsPDF();
+    doc.addImage(imgData, 'JPEG',0,0,210,297);
+    doc.setTextColor(255,255,255);
+
+
+    let voornaam = $('#voornaam').val();
+    let achternaam = $('#achternaam').val();
+    let adresgegevens = $('#adresgegevens').val();
+    let telefoon = $('#telefoon').val();
+    let email = $('#email').val();
+    let geboortedatum = $('#geboortedatum').val();
+    let geboorteplaats = $('#geboorteplaats').val();
+    let nationaliteit = $('#nationaliteit').val();
+
+    doc.text(40, 27, voornaam);
+    doc.setFontSize(10);
+
+
+    doc.text(40, 32, achternaam);
+    doc.text(40, 37, adresgegevens);
+    doc.text(40, 42, telefoon);
+    doc.text(40, 47, email);
+    doc.text(40, 52, geboortedatum);
+    doc.text(40, 57, geboorteplaats);
+    doc.text(40, 67, nationaliteit);
+
+
+
+
+
+    doc.save('test.pdf');
+
+
+
+
+
+    });
+    </script>
+    <div class="fixed-text">
+
+        <div id="fixed-text-description-title">Duurt lang he, een CV maken?</div>
+        <div id="fixed-text-description-subtext">Maak 'm hier. In een handomdraai.</div>
+    </div> <!-- Einde fixed-text container -->
+    </div> <!-- Einde div container -->
+</body>
+</html>

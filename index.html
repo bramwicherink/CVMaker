@@ -1,74 +1,66 @@
+<!DOCTYPE HTML>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="jquery-3.3.1.js"></script>
     <script src="jspdf.min.js"></script>
     <script src="jspdf.debug.js"></script>
-    <script src="js/template1.js"></script>
+    <script src="js/templates_base64/template1.js"></script>
+    <script src="js/formToPDF/formToPDF.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/jQuery.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 
 </head>
 <body>
-<div id="navbar"><span>CVmaker</span></div>
+<div class="container">
+
 <div id="wrapper">
-    <div contenteditable="true">Hello, edit me!</div>
+    <ul id="container-cards">
+    <li class="card" id="card-1">
 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu sapien pulvinar, laoreet ipsum ut, blandit urna. Integer aliquam, tellus a aliquam commodo, nisl magna rutrum nisi, in euismod nisl lacus vitae enim. Vivamus hendrerit lorem rutrum convallis ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas bibendum scelerisque lacus vel tristique. Suspendisse dapibus lacus est, non vulputate nisi porta nec. Nunc fringilla a turpis non ullamcorper. Fusce lectus enim, lacinia ut erat at, molestie pretium arcu. Maecenas vel tortor eu nibh pellentesque pretium sit amet ut felis. Vivamus commodo, quam quis facilisis tempus, nisi lacus pellentesque ex, vel consequat metus augue vel lorem. Integer ullamcorper arcu in condimentum tincidunt. Vestibulum tempor nisi id sapien rutrum sollicitudin. Nulla id sapien sapien. Aenean quis orci vestibulum mi mattis tristique ac eu justo. Duis lobortis enim a fringilla tincidunt. Suspendisse mattis est ut est lobortis, nec tincidunt ante blandit.
 
-    <input type="text" id="voornaam" value="" placeholder="Voornaam"><br>
-    <input type="text" id="achternaam" value="" placeholder="Achternaam" /><br>
-    <input type="text" id="adresgegevens" value="" placeholder="Adres" /><br>
-    <input type="text" id="telefoon" value="" placeholder="Telefoonnummer"/><br>
-    <input type="text" id="email"  value="" placeholder="E-mailadres"/><br>
-    <input type="date" id="geboortedatum" value="" placeholder="Geboortedatum"/><br>
-    <input type="text" id="geboorteplaats" value="" placeholder="Geboorteplaats"/><br>
-    <select name="geslacht">
-        <option value="man">Man</option>
-        <option value="vrouw">Vrouw</option>
-        <option value="nietbepaald">Niet-bepaald</option>
-    </select>
-    <input type="text" id="nationaliteit"  value="" placeholder="Nationaliteit"/>
-    <input type="button" id="button" value="Maak mijn CV!"/>
-    <script>
+            Phasellus finibus euismod dolor, non sagittis libero blandit id. Sed sed velit erat. Aliquam erat volutpat. Sed maximus viverra mauris, eu feugiat risus vulputate vel. Suspendisse potenti. Maecenas mattis lacus sit amet purus vehicula, vel mollis nibh laoreet. Nam ac porta arcu. Aliquam bibendum rutrum condimentum. Nam condimentum et ligula quis pretium. Fusce tempus lectus elit. Morbi in lectus ac augue tristique dapibus. Praesent vel eros elementum, scelerisque justo eu, dictum lorem.
 
-        $('#button').click(function() {
+            Morbi ac nisl eu massa maximus placerat. Fusce nec vehicula dolor. Morbi in erat non nibh hendrerit semper. Pellentesque eu vestibulum neque. Pellentesque et viverra erat. Vestibulum id volutpat leo. Nullam fermentum bibendum nunc, congue facilisis lorem cursus vel. Maecenas tristique faucibus ultrices. Suspendisse egestas maximus egestas. Pellentesque in nisl sed nisi porta sagittis.
 
-            let doc = new jsPDF();
-            doc.addImage(imgData, 'JPEG',0,0,210,297);
-            doc.setTextColor(255,255,255);
+            Suspendisse consectetur urna id molestie fermentum. Vestibulum commodo tempus posuere. Duis euismod, est at iaculis elementum, ante velit tristique sapien, facilisis fermentum lorem eros non mi. Morbi accumsan rutrum mauris, ac dictum velit vulputate a. Nullam sit amet nisi lacinia, consequat nibh malesuada, tristique nunc. Suspendisse faucibus ultricies interdum. Quisque quis rhoncus mi. Nam varius semper sollicitudin. Aliquam ac laoreet urna, a facilisis est. Aenean luctus a orci et porttitor.
 
+            Etiam vitae sem quis quam vehicula laoreet. Sed iaculis sem a pulvinar euismod. Integer imperdiet rhoncus tortor, eu pharetra eros mattis non. Etiam luctus egestas iaculis. Sed at enim convallis, consectetur justo sed, consequat purus. Nam convallis purus id libero vehicula, non porttitor lectus egestas. In cursus, quam eget hendrerit aliquam, arcu lacus lacinia augue, id elementum neque purus ac velit. Vivamus sit amet sapien nec erat malesuada facilisis. Aenean ligula enim, egestas et tellus eget, tincidunt pretium risus. Nulla non mattis eros. Nam nec augue at odio facilisis consequat non id erat. Phasellus lobortis dapibus ex. Praesent rhoncus libero rutrum nulla efficitur, ac dignissim lorem placerat. Nunc ante magna, lobortis a mollis non, consectetur sed ipsum.</p>
+    </li>
 
-            let voornaam = $('#voornaam').val();
-            let achternaam = $('#achternaam').val();
-            let adresgegevens = $('#adresgegevens').val();
-            let telefoon = $('#telefoon').val();
-            let email = $('#email').val();
-            let geboortedatum = $('#geboortedatum').val();
-            let geboorteplaats = $('#geboorteplaats').val();
-            let nationaliteit = $('#nationaliteit').val();
+    <li class="card" id="card-2">
 
-            doc.text(40, 27, voornaam);
-            doc.setFontSize(10);
+        <h1>Controleren</h1>
+        <p>Test</p>
+    </li>
 
+    <li class="card" id="card-3">
 
-            doc.text(40, 32, achternaam);
-            doc.text(40, 37, adresgegevens);
-            doc.text(40, 42, telefoon);
-            doc.text(40, 47, email);
-            doc.text(40, 52, geboortedatum);
-            doc.text(40, 57, geboorteplaats);
-            doc.text(40, 67, nationaliteit);
+        <h1>Relaxen</h1>
+        <p>Test</p>
+    </li>
 
 
 
+</ul> <!-- EINDE CONTAINER-CARDS CLASS -->
 
+</div>
 
-            doc.save('test.pdf');
+    <div class="fixed-text">
 
+<div id="fixed-text-description-title">Duurt lang he, een CV maken?</div>
+<div id="fixed-text-description-subtext">Maak 'm hier. In een handomdraai.</div>
+        <div class="start-button">
+            <p>Begin nu!</p>
+        </div>
+</div> <!-- Einde fixed-text container -->
 
-
-
-
-        });
-    </script>
+</div> <!-- Einde div container -->
 </body>
 </html>

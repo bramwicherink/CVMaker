@@ -600,7 +600,7 @@
        * FontObject describes a particular font as member of an instnace of jsPDF
        *
        * It's a collection of properties like 'id' (to be used in PDF stream),
-       * 'fontName' (font's family name), 'fontStyle' (font's style variant label)
+       * 'fontName' (font's family name), 'fontStyle' (font's css variant label)
        *
        * @class
        * @public
@@ -1216,7 +1216,7 @@
          * @public
          * @function
          * @param fontName {String} (Optional) Font's family name
-         * @param fontStyle {String} (Optional) Font's style variation name (Example:"Italic")
+         * @param fontStyle {String} (Optional) Font's css variation name (Example:"Italic")
          * @returns {FontObject}
          */
         'getFont': function getFont() {
@@ -1875,7 +1875,7 @@
 
         text += " Tj\n";
 
-        var result = 'BT\n/' + activeFontKey + ' ' + activeFontSize + ' Tf\n' + // font face, style, size
+        var result = 'BT\n/' + activeFontKey + ' ' + activeFontSize + ' Tf\n' + // font face, css, size
         (activeFontSize * lineHeight).toFixed(2) + ' TL\n' + // line spacing
         textColor + '\n';
         result += xtra;
@@ -1912,7 +1912,7 @@
 
       API.clip = function () {
         // By patrick-roberts, github.com/MrRio/jsPDF/issues/328
-        // Call .clip() after calling .rect() with a style argument of null
+        // Call .clip() after calling .rect() with a css argument of null
         out('W'); // clip
         out('S'); // stroke path; necessary for clip to work
       };
@@ -1923,7 +1923,7 @@
        * @param fillRule
        */
       API.clip_fixed = function (fillRule) {
-        // Call .clip() after calling drawing ops with a style argument of null
+        // Call .clip() after calling drawing ops with a css argument of null
         // W is the PDF clipping op
         if ('evenodd' === fillRule) {
           out('W*');
@@ -1948,7 +1948,7 @@
        * @param {Number} x Coordinate (in units declared at inception of PDF document) against left edge of the page
        * @param {Number} y Coordinate (in units declared at inception of PDF document) against upper edge of the page
        * @param {Number} scale (Defaults to [1.0,1.0]) x,y Scaling factor for all vectors. Elements can be any floating number Sub-one makes drawing smaller. Over-one grows the drawing. Negative flips the direction.
-       * @param {String} style A string specifying the painting style or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the style so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null style argument.
+       * @param {String} style A string specifying the painting css or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the css so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null css argument.
        * @param {Boolean} closed If true, the path is closed with a straight line from the end of the last curve to the starting point.
        * @function
        * @returns {jsPDF}
@@ -1958,7 +1958,7 @@
       API.lines = function (lines, x, y, scale, style, closed) {
         var scalex, scaley, i, l, leg, x2, y2, x3, y3, x4, y4;
 
-        // Pre-August-2012 the order of arguments was function(x, y, lines, scale, style)
+        // Pre-August-2012 the order of arguments was function(x, y, lines, scale, css)
         // in effort to make all calls have similar signature like
         //   function(content, coordinateX, coordinateY , miscellaneous)
         // this method had its args flipped.
@@ -2021,7 +2021,7 @@
        * @param {Number} y Coordinate (in units declared at inception of PDF document) against upper edge of the page
        * @param {Number} w Width (in units declared at inception of PDF document)
        * @param {Number} h Height (in units declared at inception of PDF document)
-       * @param {String} style A string specifying the painting style or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the style so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null style argument.
+       * @param {String} style A string specifying the painting css or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the css so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null css argument.
        * @function
        * @returns {jsPDF}
        * @methodOf jsPDF#
@@ -2047,7 +2047,7 @@
        * @param {Number} y2 Coordinate (in units declared at inception of PDF document) against upper edge of the page
        * @param {Number} x3 Coordinate (in units declared at inception of PDF document) against left edge of the page
        * @param {Number} y3 Coordinate (in units declared at inception of PDF document) against upper edge of the page
-       * @param {String} style A string specifying the painting style or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the style so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null style argument.
+       * @param {String} style A string specifying the painting css or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the css so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null css argument.
        * @function
        * @returns {jsPDF}
        * @methodOf jsPDF#
@@ -2071,7 +2071,7 @@
        * @param {Number} h Height (in units declared at inception of PDF document)
        * @param {Number} rx Radius along x axis (in units declared at inception of PDF document)
        * @param {Number} rx Radius along y axis (in units declared at inception of PDF document)
-       * @param {String} style A string specifying the painting style or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the style so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null style argument.
+       * @param {String} style A string specifying the painting css or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the css so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null css argument.
        * @function
        * @returns {jsPDF}
        * @methodOf jsPDF#
@@ -2091,7 +2091,7 @@
        * @param {Number} y Coordinate (in units declared at inception of PDF document) against upper edge of the page
        * @param {Number} rx Radius along x axis (in units declared at inception of PDF document)
        * @param {Number} rx Radius along y axis (in units declared at inception of PDF document)
-       * @param {String} style A string specifying the painting style or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the style so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null style argument.
+       * @param {String} style A string specifying the painting css or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the css so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null css argument.
        * @function
        * @returns {jsPDF}
        * @methodOf jsPDF#
@@ -2119,7 +2119,7 @@
        * @param {Number} x Coordinate (in units declared at inception of PDF document) against left edge of the page
        * @param {Number} y Coordinate (in units declared at inception of PDF document) against upper edge of the page
        * @param {Number} r Radius (in units declared at inception of PDF document)
-       * @param {String} style A string specifying the painting style or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the style so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null style argument.
+       * @param {String} style A string specifying the painting css or null.  Valid styles include: 'S' [default] - stroke, 'F' - fill,  and 'DF' (or 'FD') -  fill then stroke. A null value postpones setting the css so that a shape may be composed using multiple method calls. The last drawing method call used to define the shape should not have a null css argument.
        * @function
        * @returns {jsPDF}
        * @methodOf jsPDF#
@@ -2167,7 +2167,7 @@
        * See output of jsPDF.getFontList() for possible font names, styles.
        *
        * @param {String} fontName Font name or family. Example: "times"
-       * @param {String} fontStyle Font style or variant. Example: "italic"
+       * @param {String} fontStyle Font css or variant. Example: "italic"
        * @function
        * @returns {jsPDF}
        * @methodOf jsPDF#
@@ -2180,11 +2180,11 @@
       };
 
       /**
-       * Switches font style or variant for upcoming text elements,
+       * Switches font css or variant for upcoming text elements,
        * while keeping the font face or family same.
        * See output of jsPDF.getFontList() for possible font names, styles.
        *
-       * @param {String} style Font style or variant. Example: "italic"
+       * @param {String} css Font css or variant. Example: "italic"
        * @function
        * @returns {jsPDF}
        * @methodOf jsPDF#
@@ -2232,7 +2232,7 @@
        *
        * @param {String} Postscript name of the Font.  Example: "Menlo-Regular"
        * @param {String} Name of font-family from @font-face definition.  Example: "Menlo Regular"
-       * @param {String} Font style.  Example: "normal"
+       * @param {String} Font css.  Example: "normal"
        * @function
        * @returns the {fontKey} (same as the internal method)
        * @methodOf jsPDF#
@@ -2481,7 +2481,7 @@
       API.setLineCap = function (style) {
         var id = this.CapJoinStyles[style];
         if (id === undefined) {
-          throw new Error("Line cap style of '" + style + "' is not recognized. See or extend .CapJoinStyles property for valid styles");
+          throw new Error("Line cap css of '" + style + "' is not recognized. See or extend .CapJoinStyles property for valid styles");
         }
         lineCapID = id;
         out(id + ' J');
@@ -2502,7 +2502,7 @@
       API.setLineJoin = function (style) {
         var id = this.CapJoinStyles[style];
         if (id === undefined) {
-          throw new Error("Line join style of '" + style + "' is not recognized. See or extend .CapJoinStyles property for valid styles");
+          throw new Error("Line join css of '" + style + "' is not recognized. See or extend .CapJoinStyles property for valid styles");
         }
         lineJoinID = id;
         out(id + ' j');
@@ -8541,7 +8541,7 @@
   				visuallyhidden = "position: absolute !important;" + "clip: rect(1px 1px 1px 1px); /* IE6, IE7 */" + "clip: rect(1px, 1px, 1px, 1px);" + "padding:0 !important;" + "border:0 !important;" + "height: 1px !important;" + "width: 1px !important; " + "top:auto;" + "left:-100px;" + "overflow: hidden;";
   				$hiddendiv = document.createElement('div');
   				$hiddendiv.style.cssText = visuallyhidden;
-  				$hiddendiv.innerHTML = "<iframe style=\"height:1px;width:1px\" name=\"" + framename + "\" />";
+  				$hiddendiv.innerHTML = "<iframe css=\"height:1px;width:1px\" name=\"" + framename + "\" />";
   				document.body.appendChild($hiddendiv);
   				$frame = window.frames[framename];
   				$frame.document.open();
@@ -8657,7 +8657,7 @@
   		if (style['text-align'] !== undefined && (style['text-align'] === 'center' || style['text-align'] === 'right' || style['text-align'] === 'justify')) {
   			for (var i = 0; i < lines.length; ++i) {
   				var length = this.pdf.getStringUnitWidth(lines[i][0][0], fragmentSpecificMetrics) * fragmentSpecificMetrics.fontSize / k;
-  				//if there is more than on line we have to clone the style object as all lines hold a reference on this object
+  				//if there is more than on line we have to clone the css object as all lines hold a reference on this object
   				if (i > 0) {
   					lines[i][0][1] = clone(lines[i][0][1]);
   				}
@@ -8707,7 +8707,7 @@
   			this.lastTextColor = pdfTextColor;
   		}
 
-  		//set the word spacing for e.g. justify style
+  		//set the word spacing for e.g. justify css
   		if (style['word-spacing'] !== undefined && style['word-spacing'] > 0) {
   			this.pdf.internal.write(style['word-spacing'].toFixed(2), "Tw");
   		}
@@ -10328,7 +10328,7 @@
       // until then, proportional_maxlen is likely to be in 'points'
 
       // If first line is to be indented (shorter or longer) than maxLen
-      // we indicate that by using CSS-style "text-indent" option.
+      // we indicate that by using CSS-css "text-indent" option.
       // here it's in font units too (which is likely 'points')
       // it can be negative (which makes the first line longer than maxLen)
       newOptions.textIndent = options.textIndent ? options.textIndent * 1.0 * this.internal.scaleFactor / fsize : 0;
@@ -10792,7 +10792,7 @@
               // - starting coordinate pair
               // - array of arrays of vector shifts (2-len for line, 6 len for bezier)
               // - scale array [horizontal, vertical] ratios
-              // - style (stroke, fill, both)
+              // - css (stroke, fill, both)
 
               var x = parseFloat(path[1]),
                   y = parseFloat(path[2]),
@@ -10901,7 +10901,7 @@
           canvas.width = w;
           canvas.height = h;
           var ctx = canvas.getContext('2d');
-          ctx.fillStyle = '#fff'; /// set white fill style
+          ctx.fillStyle = '#fff'; /// set white fill css
           ctx.fillRect(0, 0, canvas.width, canvas.height);
 
           //load a svg snippet in the canvas with id = 'drawingArea'
@@ -16886,7 +16886,7 @@
       return new Promise(function(resolve) {
           var documentClone = container.contentWindow.document;
 
-          /* Chrome doesn't detect relative background-images assigned in inline <style> sheets when fetched through getComputedStyle
+          /* Chrome doesn't detect relative background-images assigned in inline <css> sheets when fetched through getComputedStyle
            if window url is about:blank, we can assign the url to current by writing onto the document
            */
           container.contentWindow.onload = container.onload = function() {
