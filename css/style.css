@@ -103,6 +103,7 @@ p {
     border-radius: 10px;
     padding: 15px;
 
+
     height: auto;
 
 
@@ -116,7 +117,7 @@ p {
     -webkit-box-shadow: 0px 11px 32px -9px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 11px 32px -9px rgba(0,0,0,0.15);
     box-shadow: 0px 11px 32px -9px rgba(0,0,0,0.15);
-    width: calc(90%/3);
+    width: calc(80%/3);
     margin: 10px;
 }
 
@@ -222,9 +223,9 @@ p {
 
 #fixed-text-description-title {
     display: flex;
+    flex-wrap: wrap;
     font-family: 'Montserrat SemiBold', sans-serif;
     font-size: 80px;
-    width: 700px;
     color: #FFFFFF;
 
 }
@@ -235,6 +236,10 @@ p {
     color: #FFFFFF;
 }
 
+.card_text {
+    text-align: center;
+    vertical-align: center;
+}
 
 
 
