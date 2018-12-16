@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 
 
 }
@@ -8,7 +9,27 @@
 
 
 h1 {
-    font-size: 14pt;
+    font-size: 63pt;
+}
+
+h2 {
+    font-size: 53pt;
+}
+
+h3 {
+    font-size: 43pt;
+}
+
+h4 {
+    font-size: 33pt;
+}
+
+h5 {
+    font-size: 23pt;
+}
+
+h6 {
+    font-size: 13pt;
 }
 p {
     font-size: 12pt;
@@ -93,6 +114,8 @@ p {
 
 #container-cards {
     width: 100%;
+    display: inline-block;
+    margin-left: 7%;
 
 }
 
@@ -123,6 +146,11 @@ p {
 
 .card > h1 {
     color: #061F62;
+}
+
+.card p {
+    text-align: center;
+    vertical-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -171,6 +199,7 @@ p {
 .menu li a {
     color: #FFFFFF;
     text-decoration: none;
+    -webkit-transition: ease-in-out 0.2s;
 
 }
 
@@ -179,6 +208,7 @@ p {
     padding: 30px;
     color: #061F62;
     border-radius: 10px;
+    -webkit-transition: ease-in-out 0.2s;
 }
 
 
@@ -218,28 +248,18 @@ p {
 .fixed-text {
     display: flex;
     margin: 50px;
+    color: white;
+    width: 100%;
+
 
 }
 
-#fixed-text-description-title {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: 'Montserrat SemiBold', sans-serif;
-    font-size: 80px;
-    color: #FFFFFF;
 
-}
-
-#fixed-text-description-subtext {
-    font-family: 'Montserrat Light', sans-serif;
-    font-size: 40px;
-    color: #FFFFFF;
-}
 
 .card_text {
-    text-align: center;
     vertical-align: center;
 }
+
 
 
 
